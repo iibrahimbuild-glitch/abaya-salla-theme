@@ -1,0 +1,28 @@
+
+// Colors
+$main-color: var(--color-primary);
+$infinte-color: var(--infinte-color);
+$main-text-color: var(--main-text-color);
+
+:root {
+  --infinte-color: #c9c9c9;
+  --main-text-color: #231f1e;
+  --main-text-color-dark: #2b2d34;
+
+  /* Abaya palette — elegant mocha + gold accent */
+  --color-primary: #6E4B3F;        /* mocha */
+  --color-primary-d: #4E342A;      /* darker mocha */
+  --color-primary-l: #8A6A5C;      /* light mocha */
+  --color-primary-reverse: #C9A66B; /* gold accent */
+  --color-text: #5b514c;
+  --bg-gray: #f3efec1a;
+  --color-grey: #f7f4f1;
+  --color-light-grey: #ece5df;
+  /* font-size */
+  --font-sm: 0.8685714286rem;
+  /* font-family */
+  --font-main: "Tajawal";
+
+  /* plugins */
+  --mm-ocd-width: calc(100% - 51px);
+}
