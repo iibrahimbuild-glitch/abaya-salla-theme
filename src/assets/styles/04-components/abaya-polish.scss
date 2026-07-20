@@ -3,6 +3,16 @@
 // Minimal, flat, stone-neutral. Loaded last so it wins over base styles.
 // ==========================================================================
 
+// --- Force editorial ink over merchant-injected accent --------------------
+// Salla injects --color-primary from the store's color setting (teal on the
+// demo store). Double :root raises specificity so the editorial ink wins.
+:root:root {
+  --color-primary: #1A1917;
+  --color-primary-d: #000000;
+  --color-primary-l: #4A4744;
+  --color-primary-reverse: #8A8177;
+}
+
 // --- Global canvas: warm stone, generous air ------------------------------
 body {
   background: #F6F4F0;
@@ -67,12 +77,16 @@ body {
 }
 
 // --- Headings: editorial serif, airy uppercase eyebrow --------------------
+// Block titles use .s-block__title h2 (font-bold utility) — match specificity.
+.s-block__title h2,
 .s-block h2,
+.s-slider-block__title,
 .home-block-title,
 .section-title {
-  font-family: var(--font-display);
-  font-weight: 400;
-  letter-spacing: .04em;
+  font-family: var(--font-display) !important;
+  font-weight: 400 !important;
+  letter-spacing: .03em;
+  font-size: 26px;
   color: var(--color-primary);
 }
 
