@@ -10,17 +10,59 @@ body {
   letter-spacing: .01em;
 }
 
-// --- Navigation: uppercase, letter-spaced, hairline -----------------------
-.s-header,
-header {
-  .navbar-nav a,
+// --- Editorial header: hairline, quiet, paper ground ----------------------
+.store-header--editorial {
+  background: var(--paper, #F6F4F0);
+
+  // top bar: thin, muted, low presence
+  .top-navbar {
+    background: transparent;
+    border-bottom: 1px solid var(--line, #E4DFD7);
+    font-size: 11px;
+    letter-spacing: .12em;
+    min-height: 40px;
+  }
+
+  // main bar: no shadow, hairline underline, sticky paper
+  .main-nav-container {
+    background: var(--paper, #F6F4F0);
+    box-shadow: none;
+    border-bottom: 1px solid var(--line, #Dcd8d1);
+  }
+
+  // menu links: uppercase, letter-spaced, hairline hover
+  custom-main-menu a,
   .main-menu a,
-  nav a {
+  salla-menu a {
     text-transform: uppercase;
     letter-spacing: .18em;
     font-size: 12px;
     font-weight: 400;
     color: var(--color-primary);
+  }
+
+  // logo: constrained, refined
+  .navbar-brand img {
+    max-height: 44px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  // header icons (search / user / bag): quiet ink, airy
+  .header-btn__icon,
+  .sicon-shopping-bag,
+  salla-user-menu i,
+  .s-search-bar-button i {
+    color: var(--color-primary);
+    font-size: 20px;
+  }
+
+  // search: minimal — drop the gray pill for a hairline field
+  .s-search-input {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid var(--line, #Dcd8d1) !important;
+    border-radius: 0 !important;
   }
 }
 
