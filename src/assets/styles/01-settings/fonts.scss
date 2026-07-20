@@ -1,11 +1,12 @@
-// Editorial type system (Totême-inspired)
-// Serif display for headings (Amiri) + clean sans for body/UI (Tajawal).
-// Merchant can override via Salla "fonts" feature in the dashboard.
-@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap");
+// Editorial type system
+// Display headings: Thmanyah Serif Display (self-hosted, see _thmanyah-face).
+// Body / UI: Tajawal. Merchant can override body via Salla "fonts" feature.
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap");
+@import 'thmanyah-face';
 
 :root {
-  --font-main: "Tajawal", sans-serif;   // body / UI
-  --font-display: "Amiri", serif;        // headings / editorial
+  --font-main: "Tajawal", sans-serif;              // body / UI
+  --font-display: "Thmanyah", "Amiri", Georgia, serif; // editorial headings
 }
 
 body,
@@ -17,10 +18,9 @@ textarea {
   font-weight: 400;
 }
 
-// Editorial serif headings — light, airy, letter-spaced
 h1, h2, h3,
 .font-display {
   font-family: var(--font-display);
   font-weight: 400;
-  letter-spacing: .01em;
+  letter-spacing: .02em;
 }
