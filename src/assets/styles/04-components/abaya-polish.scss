@@ -441,3 +441,142 @@ button:focus-visible {
   outline: 1.5px solid var(--color-primary);
   outline-offset: 2px;
 }
+
+// ==========================================================================
+// HOME BLOCKS — editorial treatment
+// ==========================================================================
+
+// --- Block title: taupe hairline accent + quiet subtitle ------------------
+.s-block__title {
+  h2 {
+    position: relative;
+    padding-bottom: 14px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset-inline-start: 0;
+      bottom: 0;
+      width: 44px;
+      height: 1px;
+      background: var(--color-primary-reverse); // taupe
+    }
+  }
+  p { // subtitle
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    font-size: 11px;
+    color: var(--color-primary-l);
+  }
+}
+
+// "view all" links → uppercase micro-link
+.s-block__display-all {
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: 11px;
+  font-weight: 400 !important;
+  color: var(--color-primary-l) !important;
+  opacity: 1 !important;
+}
+
+// --- Collection links (main-links): squared imagery, uppercase labels -----
+.s-block--categories {
+  .slide--cat-entry img,
+  .slide--cat-entry .has-placeholder {
+    border-radius: 0 !important;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    background: var(--color-stone);
+  }
+  .slide--cat-entry {
+    text-align: center;
+    span, p {
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: 12px;
+      color: var(--color-primary);
+    }
+  }
+}
+
+// --- Brands / logos slider: paper ground, quiet marks ---------------------
+.s-block--logos-slider {
+  background: var(--paper) !important;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+
+  .brand-item {
+    filter: grayscale(1);
+    opacity: .55;
+    transition: opacity .3s ease, filter .3s ease;
+    &:hover { filter: grayscale(0); opacity: 1; }
+  }
+}
+
+// --- Square photo banners: editorial white bordered label -----------------
+.s-block--banners {
+  .banner-entry { border-radius: 0 !important; }
+  .text-with-border {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 13px;
+    border: 1px solid rgba(255,255,255,.7);
+    padding: 12px 26px;
+    background: transparent;
+    transition: background .35s ease, color .35s ease;
+  }
+  .with-hover:hover .text-with-border {
+    background: #fff;
+    color: var(--color-primary);
+  }
+}
+
+// --- Store features: thin ink icons, serif titles -------------------------
+.s-block--features {
+  .feature-icon i {
+    font-size: 30px;
+    color: var(--color-primary);
+    font-weight: 300;
+  }
+  &__item h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 8px;
+  }
+  &__item p { color: var(--color-primary-l); font-size: 13px; }
+}
+
+// --- Featured product tabs: uppercase, ink underline on active ------------
+.s-block--special-products {
+  .tab-trigger {
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-size: 12px;
+    color: var(--color-primary-l);
+    border: none;
+    border-bottom: 1px solid transparent;
+    border-radius: 0;
+    &.is-active {
+      color: var(--color-primary);
+      border-bottom-color: var(--color-primary);
+      background: transparent;
+    }
+  }
+}
+
+// --- Fixed banner: editorial overlay text ---------------------------------
+.s-block--fixed-banner {
+  .banner--fixed { border-radius: 0 !important; }
+  h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: .03em;
+  }
+}
