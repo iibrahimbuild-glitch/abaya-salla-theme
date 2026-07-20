@@ -207,6 +207,57 @@ salla-add-product-button .s-button-element {
   }
 }
 
+// --- Product page: editorial detail, ink prices, serif title --------------
+.container--product-details {
+  // product title → serif display
+  h1, .product-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: .02em;
+    line-height: 1.25;
+  }
+
+  // prices: near-black ink, not red
+  .total-price,
+  .sale_price,
+  .price_is_on_sale p,
+  .text-red-800 {
+    color: var(--color-primary) !important;
+    font-family: var(--font-main);
+    font-weight: 500;
+  }
+  .before-price { color: var(--color-primary-l); }
+
+  // gallery: squared, stone ground
+  .details-slider,
+  .image-slider,
+  .details-slider img {
+    border-radius: 0 !important;
+  }
+  .details-slider { background: var(--color-stone); }
+
+  // promotion badge: quiet uppercase taupe, no loud fill
+  .promotion-title {
+    background: rgba(26,25,23,.72);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    font-size: 11px;
+    border-radius: 0;
+  }
+
+  // size-guide trigger — make it a visible editorial link (abaya key concern)
+  .size-guide-btn,
+  [onclick*="size-guide"],
+  salla-product-size-guide {
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    font-size: 12px;
+    border-bottom: 1px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+}
+
 // --- Footer: near-black editorial, quiet columns --------------------------
 .store-footer {
   background: var(--color-primary);   // near-black
