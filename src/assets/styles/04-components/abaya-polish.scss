@@ -128,6 +128,22 @@ salla-product-card,
   }
 }
 
+// Editorial card layout — centered label + price, generous air
+.s-product-card-content-main { text-align: center; margin-top: 14px; }
+.s-product-card-content-sub {
+  justify-content: center;
+  text-align: center;
+  margin-top: 4px;
+}
+.s-product-card-content-footer {
+  margin-top: 14px;
+  justify-content: center;
+}
+// add-to-cart occupies full width, quiet outline
+.s-product-card-content-footer salla-add-product-button { width: 100%; }
+// rating star → taupe, not orange
+.s-product-card-rating .sicon-star2::before { color: var(--color-primary-reverse) !important; }
+
 // price: plain near-black; old price muted grey strike (not red)
 .s-product-card-price,
 .s-product-card-sale-price h4,
