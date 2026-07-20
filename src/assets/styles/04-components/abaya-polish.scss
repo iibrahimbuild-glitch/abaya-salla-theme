@@ -181,3 +181,61 @@ salla-add-product-button .s-button-element {
 .s-block--testimonials {
   background: var(--color-grey);
 }
+
+// --- Hero slider: editorial, airy, serif overhead -------------------------
+.s-block--hero-slider {
+  .home-slider__content h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: .03em;
+    line-height: 1.12;
+    text-shadow: 0 1px 24px rgba(0,0,0,.28);
+  }
+
+  .home-slider__content .description {
+    font-family: var(--font-main);
+    font-weight: 300;
+    letter-spacing: .04em;
+    font-size: 15px;
+    opacity: .92;
+  }
+
+  // softer, warmer overlay — lets the garment stay visible
+  .overlay-bg::before,
+  .overlay-bg {
+    background: linear-gradient(180deg, rgba(26,25,23,.15) 0%, rgba(26,25,23,.42) 100%) !important;
+  }
+}
+
+// --- Footer: near-black editorial, quiet columns --------------------------
+.store-footer {
+  background: var(--color-primary);   // near-black
+  color: #E9E5DE;
+
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: #F3F0EB;
+  }
+
+  // column heading rows (menu titles) → uppercase micro-labels
+  .store-footer__inner salla-menu + *,
+  .footer-col-title {
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    font-size: 11px;
+    color: var(--color-primary-reverse); // taupe
+  }
+
+  a { color: #C9C3B9; transition: color .25s ease; }
+  a:hover { color: #fff; }
+
+  // store name mark — larger serif
+  .store-footer__inner > .container > div:first-child h3 {
+    font-size: 26px;
+    letter-spacing: .04em;
+  }
+
+  // hairline dividers between stacked footer sections
+  border-top: 1px solid var(--line);
+}
