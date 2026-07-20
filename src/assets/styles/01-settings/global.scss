@@ -9,15 +9,16 @@ $main-text-color: var(--main-text-color);
   --main-text-color: #231f1e;
   --main-text-color-dark: #2b2d34;
 
-  /* Abaya palette — elegant mocha + gold accent */
-  --color-primary: #6E4B3F;        /* mocha */
-  --color-primary-d: #4E342A;      /* darker mocha */
-  --color-primary-l: #8A6A5C;      /* light mocha */
-  --color-primary-reverse: #C9A66B; /* gold accent */
-  --color-text: #5b514c;
-  --bg-gray: #f3efec1a;
-  --color-grey: #f7f4f1;
-  --color-light-grey: #ece5df;
+  /* Totême-style editorial neutral palette — warm stone + near black */
+  --color-primary: #1A1917;        /* near-black (buttons, prices, text accents) */
+  --color-primary-d: #000000;      /* pure black */
+  --color-primary-l: #4A4744;      /* soft charcoal */
+  --color-primary-reverse: #8A8177; /* warm taupe accent */
+  --color-text: #2B2926;
+  --bg-gray: #EDEBE71a;
+  --color-grey: #EFEDE8;           /* light stone (section bg) */
+  --color-light-grey: #DCD8D1;     /* greige (banner bg) */
+  --color-stone: #D9D6D0;          /* editorial stone */
   /* font-size */
   --font-sm: 0.8685714286rem;
   /* font-family */

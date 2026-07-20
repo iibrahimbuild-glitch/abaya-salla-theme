@@ -1,77 +1,141 @@
 // ==========================================================================
-// Abaya Theme — premium polish
-// Elegant refinements tuned for the mocha + gold palette.
-// Loaded last so it overrides base component styles.
+// Abaya Theme — editorial polish (Totême-inspired)
+// Minimal, flat, stone-neutral. Loaded last so it wins over base styles.
 // ==========================================================================
 
-// --- Product cards: soft lift + gold accent on hover ---------------------
+// --- Global canvas: warm stone, generous air ------------------------------
+body {
+  background: #F6F4F0;
+  color: var(--color-text);
+  letter-spacing: .01em;
+}
+
+// --- Navigation: uppercase, letter-spaced, hairline -----------------------
+.s-header,
+header {
+  .navbar-nav a,
+  .main-menu a,
+  nav a {
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-primary);
+  }
+}
+
+// --- Headings: editorial serif, airy uppercase eyebrow --------------------
+.s-block h2,
+.home-block-title,
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: .04em;
+  color: var(--color-primary);
+}
+
+// small uppercase eyebrow label (e.g. "NEW IN", "UP TO")
+.home-block-subtitle,
+.s-block__subtitle,
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .28em;
+  font-size: 11px;
+  color: var(--color-primary-l);
+}
+
+// --- Product cards: flat, squared, quiet ----------------------------------
 salla-product-card,
 .s-product-card-entry {
-  transition: transform .35s ease, box-shadow .35s ease;
-  border-radius: 1rem;
-  overflow: hidden;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
 
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px -18px rgba(78, 52, 42, .45); // mocha shadow
-  }
-
-  // product image: gentle zoom on hover — showcases fabric drape
-  .s-product-card-image img,
+  .s-product-card-image,
   img {
-    transition: transform .6s ease;
+    border-radius: 0;
+    background: var(--color-stone);
   }
-  &:hover .s-product-card-image img,
-  &:hover img {
-    transform: scale(1.04);
+
+  // slow, subtle image reveal — lets the garment breathe
+  img { transition: opacity .5s ease, transform .8s ease; }
+  &:hover img { opacity: .88; }
+
+  // title: small serif, understated
+  .s-product-card-content-title,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: .02em;
   }
 }
 
-// --- Price + sale badge: gold accent --------------------------------------
-.s-product-card-sale-price,
-.s-product-card-price {
+// price: plain near-black, no emphasis color
+.s-product-card-price,
+.s-product-card-sale-price {
   color: var(--color-primary);
-  font-weight: 700;
+  font-family: var(--font-main);
+  font-weight: 400;
 }
 
+// discount badge: quiet taupe, not loud
 .s-product-card-promotion-title,
 .s-product-card-discount {
-  background: var(--color-primary-reverse); // gold
-  color: #3a2a20;
-  font-weight: 700;
-  letter-spacing: .2px;
+  background: transparent;
+  color: var(--color-primary-reverse);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 0;
 }
 
-// --- Primary buttons: refined mocha with gold hover -----------------------
+// --- Buttons: minimal underline / hairline outline ------------------------
 .btn--primary,
 .s-button-primary,
 salla-add-product-button .s-button-element {
   background: var(--color-primary);
-  border-color: var(--color-primary);
-  transition: background .25s ease, transform .15s ease;
+  border: 1px solid var(--color-primary);
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: 12px;
+  transition: background .3s ease, color .3s ease;
 
   &:hover {
-    background: var(--color-primary-d);
-  }
-  &:active {
-    transform: scale(.98);
+    background: transparent;
+    color: var(--color-primary);
   }
 }
 
-// --- Section headings: elegant thin underline in gold ---------------------
-.s-block h2.section-title,
-.home-block-title {
-  position: relative;
-  display: inline-block;
-  padding-bottom: .5rem;
+// "SHOP NOW" style text link (editorial CTA)
+.link-cta,
+.s-block a.more {
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: 12px;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  color: var(--color-primary);
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    inset-inline-start: 0;
-    bottom: 0;
-    width: 48px;
-    height: 2px;
-    background: var(--color-primary-reverse); // gold
+// --- Split banners: centered white uppercase label ------------------------
+.s-block--square-photos,
+.fixed-banner {
+  .banner-title,
+  h3 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 13px;
   }
+}
+
+// --- Section backgrounds alternate stone/cream for rhythm -----------------
+.s-block--features,
+.s-block--testimonials {
+  background: var(--color-grey);
 }
