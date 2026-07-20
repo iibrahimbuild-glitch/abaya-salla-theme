@@ -128,12 +128,17 @@ salla-product-card,
   }
 }
 
-// price: plain near-black, no emphasis color
+// price: plain near-black; old price muted grey strike (not red)
 .s-product-card-price,
-.s-product-card-sale-price {
-  color: var(--color-primary);
+.s-product-card-sale-price h4,
+.s-product-card-starting-price h4 {
+  color: var(--color-primary) !important;
   font-family: var(--font-main);
-  font-weight: 400;
+  font-weight: 500;
+}
+.s-product-card-sale-price span {
+  color: var(--color-primary-l) !important;
+  text-decoration: line-through;
 }
 
 // discount badge: quiet taupe, not loud
@@ -333,8 +338,7 @@ salla-add-product-button .s-button-element {
 .btn--primary,
 .btn--add,
 .s-button-primary,
-.s-button-solid,
-.s-button-element {
+.s-button-solid {
   background: var(--color-primary) !important;
   border: 1px solid var(--color-primary) !important;
   color: #fff !important;
@@ -350,6 +354,18 @@ salla-add-product-button .s-button-element {
     color: var(--color-primary) !important;
   }
 }
+
+// Add-to-cart (salla web component, fill="outline") — editorial outline.
+// Style via ::part so text stays visible; don't force a solid black fill.
+salla-add-product-button::part(button),
+salla-add-product-button .s-button-element {
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: 12px;
+  font-weight: 500;
+}
+salla-add-product-button::part(base) { border-radius: 0 !important; }
 
 .btn--outline,
 .s-button-gray-outline,
