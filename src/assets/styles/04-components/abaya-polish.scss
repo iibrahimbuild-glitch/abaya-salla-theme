@@ -263,12 +263,32 @@ salla-add-product-button .s-button-element {
   // size-guide trigger — make it a visible editorial link (abaya key concern)
   .size-guide-btn,
   [onclick*="size-guide"],
+  .with-arrow,
   salla-product-size-guide {
     text-transform: uppercase;
-    letter-spacing: .16em;
+    letter-spacing: .14em;
     font-size: 12px;
-    border-bottom: 1px solid var(--color-primary);
     color: var(--color-primary);
+  }
+
+  // option / info cards → paper, hairline, squared (kill white rounded boxes)
+  .bg-white.rounded-md {
+    background: #fff !important;
+    border: 1px solid var(--line);
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  // quantity stepper → squared ink
+  .s-quantity-input-container { border-radius: 0 !important; border-color: var(--line) !important; }
+  .s-quantity-input-button { border-radius: 0 !important; color: var(--color-primary); }
+
+  // labels → quiet uppercase
+  .form-label {
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-size: 12px;
+    color: var(--color-primary-l);
   }
 }
 
