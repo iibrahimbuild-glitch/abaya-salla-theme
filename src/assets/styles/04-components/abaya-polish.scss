@@ -304,3 +304,140 @@ salla-add-product-button .s-button-element {
   // hairline dividers between stacked footer sections
   border-top: 1px solid var(--line);
 }
+
+// ==========================================================================
+// GLOBAL EDITORIAL SYSTEM — applies across every page
+// ==========================================================================
+
+// --- Buttons: squared ink, uppercase, letter-spaced -----------------------
+.btn--primary,
+.btn--add,
+.s-button-primary,
+.s-button-solid,
+.s-button-element {
+  background: var(--color-primary) !important;
+  border: 1px solid var(--color-primary) !important;
+  color: #fff !important;
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background .3s ease, color .3s ease;
+
+  &:hover {
+    background: transparent !important;
+    color: var(--color-primary) !important;
+  }
+}
+
+.btn--outline,
+.s-button-gray-outline,
+.s-button-text {
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: 12px;
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+// --- Inputs & selects: hairline, squared ----------------------------------
+.form-input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+select,
+textarea {
+  border-radius: 0 !important;
+  border-color: var(--line) !important;
+  background: transparent;
+}
+.form-input:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: none !important;
+  outline: none;
+}
+
+// --- Breadcrumbs: quiet uppercase micro-nav -------------------------------
+.breadcrumbs,
+.breadcrumb {
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: 11px;
+  color: var(--color-primary-l);
+
+  a { color: var(--color-primary-l); }
+  a:hover { color: var(--color-primary); }
+}
+
+// --- Category / listing page ----------------------------------------------
+#page-main-title,
+.container--products-list h1 {
+  font-family: var(--font-display) !important;
+  font-weight: 400 !important;
+  font-size: 30px;
+  letter-spacing: .02em;
+}
+// sort select + filter labels: quiet
+.container--products-list label { color: var(--color-primary-l); }
+
+// filters sidebar: hairline, no heavy chrome
+salla-filters {
+  --s-filter-border-radius: 0;
+}
+
+// --- Pagination: minimal ink ----------------------------------------------
+.pagination-bullet-active,
+.s-pagination .is-active {
+  background: var(--color-primary) !important;
+  color: #fff !important;
+  border-radius: 0 !important;
+}
+
+// --- Cart: flat editorial cards -------------------------------------------
+.cart-item {
+  background: #fff !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.cart-item img { border-radius: 0 !important; }
+// "free" ribbon → quiet ink, not loud red
+.free-ribbon { background: var(--color-primary) !important; }
+
+// --- Section rhythm: generous editorial vertical space --------------------
+.s-block {
+  padding-top: clamp(40px, 6vw, 84px);
+  padding-bottom: clamp(40px, 6vw, 84px);
+}
+.s-block--hero-slider { padding: 0; }   // hero stays full-bleed
+
+// --- Tags / quantity / misc quiet accents ---------------------------------
+.s-tag,
+.product-tag {
+  background: var(--color-grey);
+  color: var(--color-primary);
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 11px;
+}
+
+// --- Star ratings tuned to taupe (not loud gold) --------------------------
+.s-rating-star,
+.sicon-star-fill {
+  color: var(--color-primary-reverse);
+}
+
+// --- Global links & focus a11y --------------------------------------------
+a:focus-visible,
+button:focus-visible {
+  outline: 1.5px solid var(--color-primary);
+  outline-offset: 2px;
+}
