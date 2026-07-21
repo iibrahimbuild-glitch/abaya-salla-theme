@@ -667,4 +667,122 @@ p { color: var(--color-text); }
 
 // tighten heavy rounded corners globally toward editorial squared feel
 .rounded-md,
-.rounded-lg { border-radius: 2px; }
+.rounded-lg,
+.rounded { border-radius: 2px; }
+
+// ==========================================================================
+// ALL PAGES + HELPER WIDGETS — editorial coverage
+// ==========================================================================
+
+// --- Page section headings: serif, medium (not faux-bold heavy) -----------
+.blog-category__title,
+.post-entry__title,
+.brand-char,
+.thanks-item,
+.s-information-page h1,
+.s-information-page h2,
+[id="page-main-title"] {
+  font-family: var(--font-display) !important;
+  font-weight: 500 !important;
+  letter-spacing: .01em;
+  color: var(--color-primary);
+}
+
+// --- Blog: squared media, quiet meta --------------------------------------
+.blog-slider,
+.blog-slider img,
+.post-entry img,
+.post-entry__thumb {
+  border-radius: 0 !important;
+}
+.post-entry__title { font-size: 16px; }
+.post-entry__icons { color: var(--color-primary-l); letter-spacing: .02em; }
+
+// --- Brands: squared, quiet marks, uppercase nav --------------------------
+.brand-item,
+.brand-item img,
+.brand-page__banner {
+  border-radius: 0 !important;
+}
+.brand-item {
+  filter: grayscale(1);
+  opacity: .6;
+  transition: opacity .3s ease, filter .3s ease;
+  &:hover { filter: grayscale(0); opacity: 1; }
+}
+.brands-nav__item,
+.brand-char {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+// --- Customer / account pages: hairline fields, squared cards -------------
+.profile-field-item {
+  border-radius: 0 !important;
+  border-color: var(--line) !important;
+}
+.user-content .bg-white,
+.customer-page .bg-white {
+  border: 1px solid var(--line);
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+// --- Empty states: editorial, quiet ---------------------------------------
+.no-content-placeholder {
+  h3, h2, .title {
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--color-primary);
+  }
+  p, .desc { color: var(--color-primary-l); }
+}
+
+// --- Breadcrumb widget: uppercase micro-nav -------------------------------
+salla-breadcrumb::part(list),
+salla-breadcrumb a,
+.s-breadcrumb {
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: 11px;
+  color: var(--color-primary-l);
+}
+
+// --- Rating stars widget → taupe ------------------------------------------
+salla-rating-stars {
+  --s-rating-star-color: var(--color-primary-reverse);
+  color: var(--color-primary-reverse);
+}
+
+// --- Countdown boxes → squared ink ----------------------------------------
+salla-count-down::part(box),
+.s-count-down-box {
+  border-radius: 0 !important;
+  background: var(--color-primary) !important;
+  color: #fff !important;
+}
+
+// --- Modals & offers → squared editorial ----------------------------------
+salla-modal::part(modal),
+salla-modal::part(body),
+.s-modal-body,
+salla-offer::part(base) {
+  border-radius: 0 !important;
+}
+
+// --- Installment / trust widgets: quiet hairline --------------------------
+salla-installment::part(base),
+.s-installment {
+  border-radius: 0 !important;
+  border: 1px solid var(--line);
+}
+
+// --- Coupon / cart summary / totals: squared ------------------------------
+.btn--coupon,
+.s-cart-summary,
+.summary-box {
+  border-radius: 0 !important;
+}
+
+// --- Thank-you page: editorial confirmation -------------------------------
+.thanks-item { letter-spacing: .01em; }
